@@ -1,0 +1,11 @@
+<!-- <button [@myTrigger]='state' (click)='toggleState()'>Click me</button> -->
+
+<button (click)='toggleState()' [@removeMe]='btnState'>Click me</button>
+<ul>
+  <li *ngFor="let item of items" [@myTrigger]='state' 
+  (@myTrigger.start)="animStart($event)"
+  (@myTrigger.done)="animDone($event)"
+  >{{ item }}</li>
+</ul>
+
+{{ animDetails }}
